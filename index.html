@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="js/data.js" defer></script>
+    <script src="js/script.js" defer></script>
+    <title>My Choice Restaurant</title>
+  </head>
+  <body>
+    <div id="loader" class="loader_bg">
+      <div class="loader_a">
+        <div class="loader loader-3">
+          <div class="dot dot1"></div>
+          <div class="dot dot2"></div>
+          <div class="dot dot3"></div>
+        </div>
+      </div>
+    </div>
+
+    <nav class="nav">
+      <div style="display: flex; justify-content: space-between;">
+        <a href="#top">
+          <div class="logo">
+            <img class="img-responsive" src="imgs/logo.png" />
+            <h2 class="logo_text">My Choice<br />Restaurant</h2>
+          </div>
+        </a>
+        <ul>
+          <li><a id="nav_home" href="#" class="current nav-heading-a"><i class="fa-solid fa-home"></i><h3 class="nav-heading">Home</h3></a></li>
+          <li><a id="nav_menu" href="#menu" class="nav-heading-a"><i class="fa-solid fa-address-book"></i><h3 class="nav-heading">Menu</h3></a></li>
+          <li><a id="nav_services" href="#services" class="nav-heading-a"><i class="fa-solid fa-shopping-basket "></i><h3 class="nav-heading">Services</h3></a></li>
+          <li><a id="nav_about" href="#about" class="nav-heading-a"><i class="fa-solid fa-user"></i><h3 class="nav-heading">About Us</h3></a></li>
+          <li><a id="nav_contact" href="#contact" class="nav-heading-a"><i class="fa-solid fa-map-marker"></i><h3 class="nav-heading">Contact</h3></a></li>
+        </ul>
+      </div>
+    </nav>
+<div class="image-slider carousel-container" id="top">
+      <div class="mySlides animate">
+        <img src="imgs/burger.jpg" alt="slide" />
+        
+      </div>
+
+      <div class="mySlides animate">
+        <img src="imgs/Penang.jpg" alt="slide" />
+        
+      </div>
+
+      <div class="mySlides animate">
+        <img src="imgs/sushi.jpeg" alt="slide" />
+        
+      </div>
+
+      <div class="mySlides animate">
+        <img src="imgs/pizza.jpg" alt="slide" />
+      </div>
+
+      <div class="mySlides animate">
+        <img src="imgs/tom.jpg" alt="slide" />
+        
+      </div>
+
+    
+
+      <!-- Next and previous buttons -->
+      <a class="prev" onclick="prevSlide()">&#10094;</a>
+      <a class="next" onclick="nextSlide()">&#10095;</a>
+
+      <!-- The dots/circles -->
+      <div class="dots-container">
+        <span class="dots" onclick="currentSlide(1)"></span>
+        <span class="dots" onclick="currentSlide(2)"></span>
+        <span class="dots" onclick="currentSlide(3)"></span>
+        <span class="dots" onclick="currentSlide(4)"></span>
+        <span class="dots" onclick="currentSlide(5)"></span>
+      </div>
+      <div class="slider-middle">
+        <img class="img-pan" src="imgs/pan.png" />
+        <h1>Welcome To My Choice Restaurant</h1>
+        <p>
+          "Fusion flavors, inviting ambiance, exceptional service, memorable experiences."
+        </p>
+      </div>
+    </div>
+
+    <section class="container content">
+      <div id="menu" class="section">
+        <h1 class="title">Menu</h1>
+        <h2 class="title-second">Foods</h2>
+        <div class="card-row" id="foods-container">
+        </div>
+        <div class="button-container" id="foods-show">
+          <button onclick="handleOnClickButton('FOODS')" class="btn btn-secondary">See More...</button>
+        </div>
+
+        <h2 class="title-second">Desserts</h2>
+        <div class="card-row" id="desserts-container">
+        </div>
+        <div class="button-container" id="desserrs-show">
+          <button onclick="handleOnClickButton('DESSERTS')" class="btn btn-secondary">See More...</button>
+        </div>
+
+
+        <h2 class="title-second">Drinks</h2>
+        <div class="card-row" id="drinks-container">
+        </div>
+        <div class="button-container" id="drinks-show">
+          <button onclick="handleOnClickButton('DRINKS')" class="btn btn-secondary">See More...</button>
+        </div>
+      </div>
+      <div id="services" class="section">
+        <h1 class="title">Our Services</h1>
+        <div class="service-section ">
+          <div class="service-item service-item-devider">
+            <i class="fa-solid fa-cutlery fa-5x"></i>
+            <h1 class="service-item-icon">Dine In</h1>
+          </div>
+          <div class="service-item service-item-devider">
+            <i class="fa-solid fa-home fa-5x"></i>
+            <h1 class="service-item-icon">Home Delivery</h1>
+          </div>
+          <div class="service-item service-item-devider">
+            <i class="fa-solid fa-gift fa-5x"></i>
+            <h1 class="service-item-icon">Gift Delivery</h1>
+          </div>
+          <div class="service-item">
+            <i class="fa-solid fa-bell fa-5x"></i>
+            <h1 class="service-item-icon">Pre Order</h1>
+          </div>
+        </div>
+      </div>
+      <div id="about" class="section">
+        <h1 class="title">About Us</h1>
+        <div class="about-row">
+          <section class="about-wrapper">
+            <div class="about-card">
+              <div class="about-card-header">
+                <span>
+                  <h5>Sri Lanka branch</h5>
+                </span>
+              </div>
+              <div class="about-card-body">
+                <span>
+                  <iframe width="460" height="300" src="https://www.youtube.com/embed/TARz-Mit_xo?si=JjLozDZjQ7HKrL67" title="Restaurant Video Presentation" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                </span>
+                <span>
+                  <h3>Description</h3>
+                  <p>
+                    "My Choice Restaurant" in Sri Lanka is a culinary haven that caters to diverse palates, offering a delectable fusion of local and international flavors. Nestled in a vibrant locale, the restaurant boasts a warm and inviting ambiance, perfect for intimate gatherings or casual dining. With an extensive menu curated to satisfy every craving, patrons can indulge in a culinary journey that showcases the rich tapestry of Sri Lankan cuisine while also featuring global culinary delights. The restaurant prides itself on using high-quality, locally-sourced ingredients to create dishes that are both flavorful and memorable. With attentive service and a charming atmosphere, "My Choice Restaurant" is not just a place to dine but an experience that celebrates the art of gastronomy.
+                  </p>
+                </span>
+                <span>
+                  <h3>Location</h3>
+                  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d126670.38394536755!2d79.77585107006314!3d7.189441092524344!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae2ee9c6bb2f73b%3A0xa51626e908186f3e!2sNegombo%2C%20Sri%20Lanka!5e0!3m2!1sen!2sjp!4v1706094302431!5m2!1sen!2sjp" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </span>
+              </div>
+            </div>
+          </section>
+          <section class="about-wrapper">
+            <div class="about-card">
+              <div class="about-card-header">
+                <span>
+                  <h5>Japan branch</h5>
+                </span>
+              </div>
+              <div class="about-card-body">
+                <span>
+                  <iframe width="460" height="300" src="https://www.youtube.com/embed/PAgBa-aFw9Q?si=i-3x4u2C1t3AjmQ1" title="Family Restaurants in Japan " frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                </span>
+                <span>
+                  <h3>Description</h3>
+                  <p>
+                    The "My Choice Restaurant" in Japan offers a captivating dining experience that seamlessly blends traditional Japanese culinary artistry with modern innovation. Situated in a sophisticated setting, the restaurant captures the essence of Japanese culture through its minimalist yet stylish decor. Renowned for its meticulous attention to detail, the menu features a harmonious mix of authentic Japanese flavors, from sushi and sashimi to grilled specialties and seasonal delicacies. The chefs at "My Choice" in Japan showcase their culinary expertise, presenting each dish as a work of art that not only tantalizes the taste buds but also pays homage to the country's rich culinary heritage. With an unwavering commitment to quality and a serene atmosphere, the Japan branch of "My Choice Restaurant" provides an immersive culinary journey that reflects the beauty and precision of Japanese gastronomy.
+                  </p>
+                </span>
+                <span>
+                  <h3>Location</h3>
+                  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3346909.934168546!2d130.87500441249998!3d34.99501989999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x600108a01c07c393%3A0x4ec6d2e2993fb6f1!2sRoyal%20Host%20Horikawa%20Gojo!5e0!3m2!1sen!2sjp!4v1706094758701!5m2!1sen!2sjp" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </span>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <div id="contact" class="footer">
+         <div class="container">
+            <div class="pdn-top-30">
+                <div class="footer-icons">
+                  <a href="#" class="footer-singe-icon"><img src="imgs/facebook.png"></a>
+                  <a href="#"  class="footer-singe-icon"><img src="imgs/Twitter.png"></a>
+                  <a href="#"  class="footer-singe-icon"><img src="imgs/linkedin.png"></a>
+                  <a href="#"  class="footer-singe-icon"><img src="imgs/instagram.png"></a>
+                </div>
+                <div class="footer-info">
+                  <div class="footer-contact-us">
+                    <h3>CONTACT US</h3>
+                    <span>123 Main Street Main <br>Avenue,<br>
+                      Colombo, Sri Lanka<br>
+                      +94775244523</span>
+                  </div>
+                  <div class="footer-additional-links">
+                    <h3>ADDITIONAL LINKS</h3>
+                    <ul class="link">
+                        <li> <a href="#">About us</a></li>
+                        <li> <a href="#">Terms and conditions</a></li>
+                        <li> <a href="#"> Privacy policy</a></li>
+                        <li> <a href="#">News</a></li>
+                        <li> <a href="#"> Contact us</a></li>
+                    </ul>
+                  </div>
+                  <div class="footer-form">
+                    <h3>Contact</h3>
+                    <div class="footer-inputs">
+                        <div class="footer-single-input">
+                          <input class="Newsletter" placeholder="Name" type="text">
+                        </div>
+                        <div class="footer-single-input">
+                          <input class="Newsletter" placeholder="Email" type="text">
+                        </div>
+                        <div class="footer-single-input">
+                          <textarea class="textarea" placeholder="comment" type="text">Comment</textarea>
+                        </div>
+                    </div>
+                    <button class="Subscribe">Submit</button>
+                  </div>
+                </div>
+            </div>
+            <div class="copyright">
+               <div class="container">
+                  <p>Copyright 2024 All Right Reserved By My Choice Restaurant</p>
+               </div>
+            </div>
+         </div>
+      </div>
+   </footer>
+  </body>
+</html>
